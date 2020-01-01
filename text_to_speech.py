@@ -1,4 +1,5 @@
 import tkinter as tk  # To create GUI
+import time  # Used for time stamp on audio file
 from gtts import gTTS  # Google Text To Speech
 from playsound import playsound  # To play the audio
 
@@ -18,9 +19,13 @@ def convert_to_speech():
     # Functionality to convert text to speech
     text = entry.get()
     speech = gTTS(text=text, lang="en")
+
+    time_stamp = time.strftime("%Y%m%d_%H%M%S")
     # Make sure audio folder is already present or else it will give error
-    speech.save('./audio/test.mp3')
-    playsound('./audio/test.mp3')
+    generate_file_name = f'./audio/audio_{time_stamp}.mp3'
+
+    speech.save(generate_file_name)
+    playsound(generate_file_name)
 
 
 button = tk.Button(ui_window, text="Go", command=convert_to_speech)
