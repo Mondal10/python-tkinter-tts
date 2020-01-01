@@ -17,6 +17,9 @@ entry.grid(row=1, column=0)
 
 def convert_to_speech():
     # Functionality to convert text to speech
+    if not entry.get():
+        # If nothing is entered in textbox then return
+        return False
     text = entry.get()
     speech = gTTS(text=text, lang="en")
 
@@ -28,7 +31,7 @@ def convert_to_speech():
     playsound(generate_file_name)
 
 
-button = tk.Button(ui_window, text="Go", command=convert_to_speech)
+button = tk.Button(ui_window, text="Convert", command=convert_to_speech)
 button.grid(row=1, column=1)
 
 # `mainloop()` is infinite loop used to run the application,
