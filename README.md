@@ -1,6 +1,6 @@
 # Python Text To Speech
 
-**Description:** A basic implementation of [Tkinter](https://docs.python.org/2/library/tkinter.html) in python for Text To Speech conversion.
+**Description:** A basic implementation of [Tkinter](https://docs.python.org/2/library/tkinter.html) in python for Text To Speech conversion and downloading the audio file with time-stamp.
 
 To Run Locally:
 - Clone the Repo.
